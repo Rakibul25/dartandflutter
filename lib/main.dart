@@ -15,26 +15,24 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Dart & Flutter"
+            "Dart & Flutter",
           ),
         ),
         body: Center(
-          child: Text(
-            "Hello from $name!",
-            style: TextStyle(
-              color: Colors.red,
-              fontSize: 20.0,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
-              wordSpacing: 3,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.black,
+          child: FlatButton(
+            textColor: Colors.red,
+            color: Colors.greenAccent, //button bg color
+            splashColor: Colors.red,
+            onPressed: (){},
+            child: Text(
+              "Press Here",
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
-
           ),
         )
       ),
-
     );
   }
 }
