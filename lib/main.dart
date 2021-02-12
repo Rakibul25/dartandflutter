@@ -19,18 +19,19 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: FlatButton(
-            textColor: Colors.red,
-            color: Colors.greenAccent, //button bg color
-            splashColor: Colors.red,
-            onPressed: (){},
-            child: Text(
-              "Press Here",
-              style: TextStyle(
-                fontSize: 20,
+            child: RaisedButton(
+              splashColor: Colors.blue,
+              elevation: 10.0,
+              highlightElevation: 30.0,
+              shape: Border.all(width: 2,color: Colors.black),
+              onPressed: (){},
+              child: Text(
+                "Click me",
+                style: TextStyle(
+                  fontSize: 20
+                ),
               ),
             ),
-          ),
         )
       ),
     );
