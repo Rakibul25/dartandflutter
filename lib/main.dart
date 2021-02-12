@@ -18,18 +18,21 @@ class MyApp extends StatelessWidget {
             "Dart & Flutter",
           ),
         ),
-        body: Center(
-            child: IconButton(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround, //work left to right
+          crossAxisAlignment: CrossAxisAlignment.start, //work up to bottom
+          children: <Widget>[
+            Text(
+              "Hello!"
+            ),
+            RaisedButton(
               onPressed: (){},
-              icon: Icon(
-                Icons.add_a_photo
+              child: Text(
+                "Click Here",
               ),
-              iconSize: 50,
-              splashColor: Colors.blue,
-              tooltip: "Take a photo!",
             )
-
-        )
+          ],
+        ),
       ),
     );
   }
