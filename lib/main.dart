@@ -28,12 +28,23 @@ class MyApp extends StatelessWidget {
                     "Hello"
                 ),
               ),
-              FlatButton(
-                onPressed: (){},
-                child: Text(
-                    "Click Here"
-                ),
-              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  RaisedButton(
+                    onPressed: (){},
+                    child: Text(
+                      "Click 1"
+                    ),
+                  ),
+                  RaisedButton(
+                    onPressed: (){},
+                    child: Text(
+                      "Click 2"
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         )
