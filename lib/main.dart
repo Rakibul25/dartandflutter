@@ -18,17 +18,17 @@ class MyApp extends StatelessWidget {
             "Dart & Flutter",
           ),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround, //work left to right
-          crossAxisAlignment: CrossAxisAlignment.start, //work up to bottom
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.start, //left to right
+          crossAxisAlignment: CrossAxisAlignment.start, //up to bottom
           children: <Widget>[
             Text(
-              "Hello!"
+              "Hello"
             ),
-            RaisedButton(
+            FlatButton(
               onPressed: (){},
               child: Text(
-                "Click Here",
+                "Click Here"
               ),
             )
           ],
