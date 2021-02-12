@@ -19,20 +19,16 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: Center(
-            child: MaterialButton(
-              color: Colors.red,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0)
-              ),
+            child: IconButton(
               onPressed: (){},
-              child: Text(
-                "Click me",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                ),
+              icon: Icon(
+                Icons.add_a_photo
               ),
-            ),
+              iconSize: 50,
+              splashColor: Colors.blue,
+              tooltip: "Take a photo!",
+            )
+
         )
       ),
     );
