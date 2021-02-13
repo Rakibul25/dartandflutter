@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   String name = "Rakib";
   @override
@@ -13,42 +14,34 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Dart & Flutter",
+          appBar: AppBar(
+            title: Text(
+              "Dart & Flutter",
+            ),
           ),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                    "Hello"
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  RaisedButton(
-                    onPressed: (){},
-                    child: Text(
-                      "Click 1"
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.account_box),
+                        hintText: "Input here",
+                        //we can use LabelText,helperText
+                        border: OutlineInputBorder(),
+                        labelText: "Input here"),
+                    maxLength: 10,
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 18,
                     ),
                   ),
-                  RaisedButton(
-                    onPressed: (){},
-                    child: Text(
-                      "Click 2"
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
-        )
-      ),
+                )
+              ],
+            ),
+          )),
     );
   }
 }
