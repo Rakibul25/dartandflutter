@@ -4,8 +4,12 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  String name = "Rakib";
+class MyApp extends StatefulWidget {
+  String name = "";
+  String textfieldvalue = "";
+  void showtext(){
+
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,22 +30,37 @@ class MyApp extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextField(
+                    onChanged: (text){
+                      name = text;
+                    },
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.account_box),
-                        hintText: "Input here",
-                        //we can use LabelText,helperText
-                        border: OutlineInputBorder(),
                         labelText: "Input here"),
+                    onChanged: (text){
+                      textfieldvalue = text;
+                    },
                     maxLength: 10,
                     style: TextStyle(
                       color: Colors.red,
                       fontSize: 18,
                     ),
                   ),
+                ),
+                RaisedButton(
+                  onPressed: showtext,
+                  child: Text(
+                    "press"
+                  ),
                 )
               ],
             ),
           )),
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }
